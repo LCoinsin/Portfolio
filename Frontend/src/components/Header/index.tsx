@@ -69,6 +69,7 @@ function LangageTest() {
 
   return (
     <div className="text-footnote">
+      <div>Test</div>
       <button
         className="flex flex-row items-center gap-2 px-4"
         onClick={() => setOpen(!open)}
