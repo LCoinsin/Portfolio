@@ -11,8 +11,8 @@ export default {
         'medium': '32pt',
         'small': '24pt',
         'tyni': '16pt',
-        'paragraphe': '15pt',
-        'footnote': '14pt',
+        'paragraphe': '14pt',
+        'footnote': '12pt',
       },
       fontFamily: {
         "mplus": "'mplus', sans-serif",

@@ -44,6 +44,22 @@ function Experience() {
     setExperienceDetails(updatedExperienceList[0]);
   }, [t]);
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   const changeExperience = (id: number) => {
     const newExperience = ExperienceList.find(
       (experience) => experience.id === id
@@ -60,29 +76,29 @@ function Experience() {
       </h1>
       <div className="h-[60px]" />
       <div className="w-full grid grid-cols-12">
-        <div className="col-span-2">
-          {ExperienceList.map((experience) => (
-            <div
-              className="text-small"
-              key={experience.id}
-              onClick={() => changeExperience(experience.id)}
+        {windowWidth >= 1024 ? (
+          <SelectorExperience
+            ExperienceList={ExperienceList}
+            changeExperience={changeExperience}
+            ExperienceDetails={ExperienceDetails}
+          />
+        ) : (
+          <div className="col-span-3">
+            <select
+              name="HeadlineAct"
+              id="HeadlineAct"
+              className="border rounded-lg px-4 py-1 min-w-full mb-3"
+              onChange={(e) => changeExperience(Number(e.target.value))}
             >
-              <div className="flex flex-row">
-                <div
-                  className={`${
-                    experience.id === ExperienceDetails.id
-                      ? "bg-primary"
-                      : "bg-black"
-                  } h-[50px] w-[3px] mr-5`}
-                />
-                <h2 className="hover:text-primary duration-200	">
+              {ExperienceList.map((experience: any) => (
+                <option key={experience.id} value={experience.id}>
                   {experience.company}
-                </h2>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="col-span-10">
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+        <div className="col-span-12 lg:col-span-10">
           <ExperienceItem
             company={ExperienceDetails.company}
             position={ExperienceDetails.position}
@@ -96,6 +112,37 @@ function Experience() {
 }
 
 export default Experience;
+
+const SelectorExperience = ({
+  ExperienceList,
+  changeExperience,
+  ExperienceDetails,
+}: any) => {
+  return (
+    <div className="col-span-2">
+      {ExperienceList.map((experience: any) => (
+        <div
+          className="text-small"
+          key={experience.id}
+          onClick={() => changeExperience(experience.id)}
+        >
+          <div className="flex flex-row">
+            <div
+              className={`${
+                experience.id === ExperienceDetails.id
+                  ? "bg-primary"
+                  : "bg-black"
+              } h-[50px] w-[3px] mr-5`}
+            />
+            <h2 className="hover:text-primary duration-200	">
+              {experience.company}
+            </h2>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 interface ExperienceItemProps {
   company: string;
@@ -112,12 +159,12 @@ const ExperienceItem = ({
 }: ExperienceItemProps) => {
   return (
     <>
-      <h2 className="text-medium font-light">
+      <h2 className="text-small md:text-medium font-light">
         {position} <span className="text-primary">@ {company}</span>
       </h2>
-      <p className="text-paragraphe font-thin">{date}</p>
+      <p className="text-footnote md:text-paragraphe font-thin">{date}</p>
       <div className="h-[20px]" />
-      <Markdown className="font-light text-paragraphe text-black prose min-w-full">
+      <Markdown className="font-light text-footnote md:text-paragraphe text-black prose min-w-full">
         {description}
       </Markdown>
     </>
