@@ -1,14 +1,6 @@
 import { SVGProps } from "react";
 
-export const FrenchFlag = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 512 512" {...props}>
-    <path fill="#fff" d="M0 0h512v512H0z" />
-    <path fill="#000091" d="M0 0h170.7v512H0z" />
-    <path fill="#e1000f" d="M341.3 0H512v512H341.3z" />
-  </svg>
-);
-
-export const EnglishFlag = (props: SVGProps<SVGSVGElement>) => (
+const EnglishFlag = (props: SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 512 512" {...props}>
     <path fill="#012169" d="M0 0h512v512H0z" />
     <path
@@ -24,8 +16,4 @@ export const EnglishFlag = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const IMAGES = {
-  profile: new URL("../public/images/PP.jpg", import.meta.url).href,
-};
-
-export default IMAGES;
+export default EnglishFlag;

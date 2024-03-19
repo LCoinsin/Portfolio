@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import IMAGES from "../../Images";
+import IMAGES from "../../assets/images/Images";
 import { useTranslation } from "react-i18next";
 
 interface BannerProps {

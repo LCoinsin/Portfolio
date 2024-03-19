@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { EnglishFlag, FrenchFlag } from "../../Images";
+import FrenchFlag from "../../assets/images/FrenchFlag";
+import EnglishFlag from "../../assets/images/EnglishFlag";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 
@@ -69,7 +70,6 @@ function LangageTest() {
 
   return (
     <div className="text-footnote">
-      <div>Test</div>
       <button
         className="flex flex-row items-center gap-2 px-4"
         onClick={() => setOpen(!open)}
