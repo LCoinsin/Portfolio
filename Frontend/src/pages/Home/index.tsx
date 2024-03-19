@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Banner from "../../components/Banner";
 import Contact from "../../components/Contact";
 import Experience from "../../components/Experiences";
@@ -5,33 +6,34 @@ import Header from "../../components/Header";
 import MyStory from "../../components/MyStory";
 import Skills from "../../components/Skills";
 
-const sections = [
-  {
-    name: "Experience",
-    link: "#experience",
-    component: <Experience />,
-  },
-  {
-    name: "Skills",
-    link: "#skills",
-    component: <Skills />,
-  },
-  {
-    name: "About me",
-    link: "#myStory",
-    component: <MyStory />,
-  },
-  {
-    name: "Contact",
-    link: "#contact",
-    component: <Contact />,
-  },
-];
-
 function Portfolio() {
+  const { t } = useTranslation();
+  const sections = [
+    {
+      name: t("experience_header_title"),
+      link: "experience",
+      component: <Experience id="experience" />,
+    },
+    {
+      name: t("skills_header_title"),
+      link: "skills",
+      component: <Skills id="skills" />,
+    },
+    {
+      name: t("myStory_header_title"),
+      link: "myStory",
+      component: <MyStory id="myStory" />,
+    },
+    {
+      name: t("contact_header_title"),
+      link: "contact",
+      component: <Contact id="contact" />,
+    },
+  ];
+
   return (
-    <div className="w-7xl mx-auto max-w-7xl px-10 font-mplus">
-      <div className="flex flex-col h-screen max-h-screen text-black">
+    <div className="w-7xl font-mplus mx-auto max-w-7xl px-10">
+      <div className="flex h-screen max-h-screen flex-col text-black">
         <Header headerSection={sections} />
         <Banner className="flex-grow" />
       </div>

@@ -2,21 +2,21 @@ import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { useTranslation } from "react-i18next";
 
-function Experience() {
+function Experience({ id }: { id: string }) {
   const { t } = useTranslation();
   const ExperienceList = [
     {
       id: 1,
       company: "Exotec",
       position: t("experience_exotec_position"),
-      date: "October 2023 - Present",
+      date: t("experience_exotec_date"),
       description: t("experience_exotec_description"),
     },
     {
       id: 2,
       company: "MBDA",
       position: t("experience_mbda_position"),
-      date: "September 2020 - August 2023",
+      date: t("experience_mbda_date"),
       description: t("experience_mbda_description"),
     },
   ];
@@ -29,14 +29,14 @@ function Experience() {
         id: 1,
         company: "Exotec",
         position: t("experience_exotec_position"),
-        date: "October 2023 - Present",
+        date: t("experience_exotec_date"),
         description: t("experience_exotec_description"),
       },
       {
         id: 2,
         company: "MBDA",
         position: t("experience_mbda_position"),
-        date: "September 2020 - August 2023",
+        date: t("experience_mbda_date"),
         description: t("experience_mbda_description"),
       },
     ];
@@ -61,7 +61,7 @@ function Experience() {
 
   const changeExperience = (id: number) => {
     const newExperience = ExperienceList.find(
-      (experience) => experience.id === id
+      (experience) => experience.id === id,
     );
     if (newExperience) {
       setExperienceDetails(newExperience);
@@ -69,12 +69,12 @@ function Experience() {
   };
 
   return (
-    <div>
+    <div id={id}>
       <h1 className="text-medium sm:text-large text-black">
         Experience<span className="text-primary">.</span>
       </h1>
       <div className="h-[30px] sm:h-[60px]" />
-      <div className="w-full grid grid-cols-12">
+      <div className="grid w-full grid-cols-12">
         {windowWidth >= 1024 ? (
           <SelectorExperience
             ExperienceList={ExperienceList}
@@ -86,7 +86,7 @@ function Experience() {
             <select
               name="HeadlineAct"
               id="HeadlineAct"
-              className="border rounded-lg px-4 py-1 min-w-full mb-[20px]"
+              className="mb-[20px] min-w-full rounded-lg border px-4 py-1"
               onChange={(e) => changeExperience(Number(e.target.value))}
             >
               {ExperienceList.map((experience: any) => (
@@ -131,7 +131,7 @@ const SelectorExperience = ({
                 experience.id === ExperienceDetails.id
                   ? "bg-primary"
                   : "bg-black"
-              } h-[50px] w-[3px] mr-5`}
+              } mr-5 h-[50px] w-[3px]`}
             />
             <h2 className="hover:text-primary duration-200	">
               {experience.company}
@@ -163,7 +163,7 @@ const ExperienceItem = ({
       </h2>
       <p className="text-footnote md:text-paragraphe font-thin">{date}</p>
       <div className="h-[20px]" />
-      <Markdown className="font-extralight text-footnote md:text-paragraphe text-black prose min-w-full">
+      <Markdown className="text-footnote md:text-paragraphe prose min-w-full font-extralight text-black">
         {description}
       </Markdown>
     </>

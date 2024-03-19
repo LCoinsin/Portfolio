@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import IMAGES, { EnglishFlag, FrenchFlag } from "../../images/Images";
+import { EnglishFlag, FrenchFlag } from "../../images/Images";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
 interface HeaderProps {
   headerSection: { name: string; link: string }[];
@@ -8,15 +9,17 @@ interface HeaderProps {
 
 function Header({ headerSection }: HeaderProps) {
   return (
-    <header className="h-16 flex justify-between items-center mx-3 text-small">
+    <header className="text-small mx-3 flex h-16 items-center justify-between">
       <div>
         LeoCsn<span className="text-primary">.</span>
       </div>
       <div className="hidden lg:block">
-        <ul className="flex flex-row gap-10 text-tyni">
+        <ul className="text-tyni flex flex-row gap-10">
           {headerSection.map((item, index) => (
             <li key={index} className="hover:text-primary">
-              <a href={item.link}>{item.name}</a>
+              <Link to={item.link} smooth={true} duration={600}>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
@@ -83,7 +86,7 @@ function LangageTest() {
             .map((lang, index) => (
               <div
                 key={index}
-                className="flex flex-row items-center gap-2 px-4 py-2 hover:bg-slate-100 duration-200"
+                className="flex flex-row items-center gap-2 px-4 py-2 duration-200 hover:bg-slate-100"
                 onClick={() => {
                   i18n.changeLanguage(lang.code);
                   setActiveLangage(lang.code);

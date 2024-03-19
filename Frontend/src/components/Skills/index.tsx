@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const skillsList = [
   {
     title: "Langage",
@@ -17,14 +19,17 @@ const skillsList = [
   },
 ];
 
-function Skills() {
+function Skills({ id }: { id: string }) {
+  const { t } = useTranslation();
+
   return (
-    <div>
+    <div id={id}>
       <h1 className="text-medium sm:text-large text-black">
-        Skills<span className="text-primary">.</span>
+        {t("skills_title")}
+        <span className="text-primary">.</span>
       </h1>
       <div className="h-[30px] sm:h-[60px]" />
-      <div className="grid grid-cols-1 text-left gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 text-left md:grid-cols-2 lg:grid-cols-4">
         {skillsList.map((skill, index) => (
           <div key={index}>
             <h2 className="text-medium font-medium">{skill.title}</h2>

@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import IMAGES from "../../images/Images";
 import { useTranslation } from "react-i18next";
 
@@ -10,13 +11,13 @@ function Banner({ className }: BannerProps) {
 
   return (
     <div
-      className={`${className} flex items-center justify-center lg:justify-between flex-row overflow-x-hidden `}
+      className={`${className} flex flex-row items-center justify-center overflow-x-hidden lg:justify-between `}
     >
       <div className="flex flex-col items-center lg:items-start">
         <h2 className="text-paragraphe sm:text-medium">
           {t("banner_subtitle")}
         </h2>
-        <h2 className="text-small sm:text-large font-extrabold text-center lg:text-left">
+        <h2 className="text-small sm:text-large text-center font-extrabold lg:text-left">
           {i18n.language === "fr" ? (
             <>
               <span className="text-primary">{t("banner_title_2")}</span>
@@ -31,21 +32,23 @@ function Banner({ className }: BannerProps) {
             </>
           )}
         </h2>
-        <p className="text-footnote sm:text-paragraphe  max-w-[450pt] font-light text-center lg:text-left">
+        <p className="text-footnote sm:text-paragraphe  max-w-[450pt] text-center font-light lg:text-left">
           {t("banner_paragraph")}
         </p>
         <div className="h-8" />
-        {/* <button className="bg-black text-white w-fit py-2 px-8 rounded-lg text-paragraphe font-extralight shadow-lg">
-          Contact me
-        </button> */}
+        <Link to="myStory" smooth={true} duration={600}>
+          <button className="text-paragraphe w-fit rounded-lg bg-black px-8 py-2 font-extralight text-white shadow-lg">
+            Contact me
+          </button>
+        </Link>
       </div>
 
       <div className="hidden lg:relative lg:flex lg:items-center">
-        <div className="w-[350pt] h-[350pt] border border-primary rounded-full flex justify-center items-center">
+        <div className="border-primary flex h-[350pt] w-[350pt] items-center justify-center rounded-full border">
           <img
             src={IMAGES.profile}
             alt="profile picture"
-            className="rounded-full w-[270pt]"
+            className="w-[270pt] rounded-full"
           />
         </div>
       </div>
