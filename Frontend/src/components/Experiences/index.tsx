@@ -71,7 +71,7 @@ function Experience() {
 
   return (
     <div>
-      <h1 className="text-large text-black">
+      <h1 className="text-medium sm:text-large text-black">
         Experience<span className="text-primary">.</span>
       </h1>
       <div className="h-[60px]" />

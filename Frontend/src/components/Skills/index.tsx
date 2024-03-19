@@ -20,11 +20,11 @@ const skillsList = [
 function Skills() {
   return (
     <div>
-      <h1 className="text-large text-black">
+      <h1 className="text-medium sm:text-large text-black">
         Skills<span className="text-primary">.</span>
       </h1>
       <div className="h-[60px]" />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+      <div className="grid grid-cols-1 text-center md:text-left gap-4 md:grid-cols-2 lg:grid-cols-4">
         {skillsList.map((skill, index) => (
           <div key={index}>
             <h2 className="text-medium font-medium">{skill.title}</h2>
