@@ -35,9 +35,9 @@ function Banner({ className }: BannerProps) {
           {t("banner_paragraph")}
         </p>
         <div className="h-8" />
-        <button className="bg-black text-white w-fit py-2 px-8 rounded-lg text-paragraphe font-extralight shadow-lg">
+        {/* <button className="bg-black text-white w-fit py-2 px-8 rounded-lg text-paragraphe font-extralight shadow-lg">
           Contact me
-        </button>
+        </button> */}
       </div>
 
       <div className="hidden lg:relative lg:flex lg:items-center">

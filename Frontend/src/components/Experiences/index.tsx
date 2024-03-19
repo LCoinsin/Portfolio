@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { exotec, mbda } from "./descriptions";
 import { useTranslation } from "react-i18next";
 
 function Experience() {
@@ -74,7 +73,7 @@ function Experience() {
       <h1 className="text-medium sm:text-large text-black">
         Experience<span className="text-primary">.</span>
       </h1>
-      <div className="h-[60px]" />
+      <div className="h-[30px] sm:h-[60px]" />
       <div className="w-full grid grid-cols-12">
         {windowWidth >= 1024 ? (
           <SelectorExperience
@@ -87,7 +86,7 @@ function Experience() {
             <select
               name="HeadlineAct"
               id="HeadlineAct"
-              className="border rounded-lg px-4 py-1 min-w-full mb-3"
+              className="border rounded-lg px-4 py-1 min-w-full mb-[20px]"
               onChange={(e) => changeExperience(Number(e.target.value))}
             >
               {ExperienceList.map((experience: any) => (
@@ -164,7 +163,7 @@ const ExperienceItem = ({
       </h2>
       <p className="text-footnote md:text-paragraphe font-thin">{date}</p>
       <div className="h-[20px]" />
-      <Markdown className="font-light text-footnote md:text-paragraphe text-black prose min-w-full">
+      <Markdown className="font-extralight text-footnote md:text-paragraphe text-black prose min-w-full">
         {description}
       </Markdown>
     </>
