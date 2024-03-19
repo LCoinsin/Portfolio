@@ -1,11 +1,11 @@
 function MyStory() {
   return (
     <div>
-      <h1 className="text-large text-black">
+      <h1 className="text-medium sm:text-large text-black">
         My Story<span className="text-primary">.</span>
       </h1>
       <div className="h-[60px]" />
-      <div className="text-paragraphe font-extralight text-justify">
+      <div className="text-footnote sm:text-paragraphe font-extralight text-justify">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
           sollicitudin dolor. Cras dignissim urna non dolor commodo pharetra.
