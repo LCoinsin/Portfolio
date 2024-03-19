@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { EnglishFlag, FrenchFlag } from "../../images/Images";
+import { EnglishFlag, FrenchFlag } from "../../Images";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 

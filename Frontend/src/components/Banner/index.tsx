@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import IMAGES from "../../images/Images";
+import IMAGES from "../../Images";
 import { useTranslation } from "react-i18next";
 
 interface BannerProps {
@@ -38,7 +38,7 @@ function Banner({ className }: BannerProps) {
         <div className="h-8" />
         <Link to="myStory" smooth={true} duration={600}>
           <button className="text-paragraphe w-fit rounded-lg bg-black px-8 py-2 font-extralight text-white shadow-lg">
-            Contact me
+            {t("contact_title")}
           </button>
         </Link>
       </div>

@@ -25,7 +25,7 @@ export const EnglishFlag = (props: SVGProps<SVGSVGElement>) => (
 );
 
 const IMAGES = {
-  profile: new URL("./pp.jpg", import.meta.url).href,
+  profile: new URL("../public/images/PP.jpg", import.meta.url).href,
 };
 
 export default IMAGES;
