@@ -8,6 +8,8 @@ interface HeaderProps {
 }
 
 function Header({ headerSection }: HeaderProps) {
+  console.log("headerSection", headerSection);
+
   return (
     <header className="text-small mx-3 flex h-16 items-center justify-between">
       <div>
