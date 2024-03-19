@@ -2,5 +2,9 @@
     "banner_title_1": "JUNIOR",
     "banner_title_2": "DEVELOPPEUR",
     "banner_subtitle": "Salut, je suis Léo",
-    "banner_paragraph": "En tant que développeur junior dédié, je m'aventure dans le monde du développement web avec une ambition : rendre le complexe simple et l'ordinaire extraordinaire."
+    "banner_paragraph": "En tant que développeur junior dédié, je m'aventure dans le monde du développement web avec une ambition : rendre le complexe simple et l'ordinaire extraordinaire.",
+    "experience_exotec_position": "QA Developpeur Python",
+    "experience_exotec_description": "Ingénieur QA et Automatisation de Tests\nRôle de leader sur le produit SkypodSystem.\n- En charge de la planification et direction des réunions pour la définition des objectifs prioritaires.\n- Hiérarchisation de bugs pour assurer une livraison qui respecte les besoins des clients.\n- Conception, développement et maintien de l'automatisation des tests en python, permettant une évaluation rapide de l'intégration et de la qualité des nouvelles versions du produit.",
+    "experience_mbda_position": "Developpeur Python",
+    "experience_mbda_description": "Apprenti en test automatique des logiciels et installations de tirs navals.\n\n Conception et Développement d’un outil de test et sanction automatique\n  - Architecture en couche (Layered architecture)\n  - Lecture de fichier PCAP (Python)\n  - Remplissage / requête base de données (SQL)\n  - Création de requête à partir des données opérateur (IHM QT)\n  - Gestion de configuration et documentation (Manuel Utilisateur, Manuel Développeur)\n\nIntégration au sein de l’équipe de tests logiciels tout au long des trois ans pour affiner le besoin et les fonctionnalités de l’outil créé.\n\nCycle de développement suivi proche d’un cycle Agile, à base d’itération successives. Gestion d’un backlog, priorisation des tâches"
 }

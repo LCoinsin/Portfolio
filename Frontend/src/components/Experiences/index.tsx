@@ -1,26 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { exotec, mbda } from "./descriptions";
-
-const ExperienceList = [
-  {
-    id: 1,
-    company: "Exotec",
-    position: "Python Developer / QA Engineer",
-    date: "October 2023 - Present",
-    description: exotec,
-  },
-  {
-    id: 2,
-    company: "MBDA",
-    position: "Python Developer",
-    date: "September 2020 - August 2023",
-    description: mbda,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 function Experience() {
+  const { t } = useTranslation();
+  const ExperienceList = [
+    {
+      id: 1,
+      company: "Exotec",
+      position: t("experience_exotec_position"),
+      date: "October 2023 - Present",
+      description: t("experience_exotec_description"),
+    },
+    {
+      id: 2,
+      company: "MBDA",
+      position: t("experience_mbda_position"),
+      date: "September 2020 - August 2023",
+      description: t("experience_mbda_description"),
+    },
+  ];
   const [ExperienceDetails, setExperienceDetails] = useState(ExperienceList[0]);
+
+  useEffect(() => {
+    // Reload ExperienceList with correct language
+    const updatedExperienceList = [
+      {
+        id: 1,
+        company: "Exotec",
+        position: t("experience_exotec_position"),
+        date: "October 2023 - Present",
+        description: t("experience_exotec_description"),
+      },
+      {
+        id: 2,
+        company: "MBDA",
+        position: t("experience_mbda_position"),
+        date: "September 2020 - August 2023",
+        description: t("experience_mbda_description"),
+      },
+    ];
+    setExperienceDetails(updatedExperienceList[0]);
+  }, [t]);
 
   const changeExperience = (id: number) => {
     const newExperience = ExperienceList.find(
@@ -93,9 +115,11 @@ const ExperienceItem = ({
       <h2 className="text-medium font-light">
         {position} <span className="text-primary">@ {company}</span>
       </h2>
-      <p className="text-footnote font-extralight">{date}</p>
+      <p className="text-paragraphe font-thin">{date}</p>
       <div className="h-[20px]" />
-      <Markdown className="font-light prose min-w-full">{description}</Markdown>
+      <Markdown className="font-light text-paragraphe text-black prose min-w-full">
+        {description}
+      </Markdown>
     </>
   );
 };

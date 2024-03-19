@@ -2,6 +2,9 @@
     "banner_title_1": "JUNIOR",
     "banner_title_2": "DEVELOPER",
     "banner_subtitle": "Hello, I'm Leo",
-    "banner_paragraph": "As a dedicated Junior Developer, I venture into the world of web development with one ambition: to make the complex simple and the ordinary extraordinary."
-    
+    "banner_paragraph": "As a dedicated Junior Developer, I venture into the world of web development with one ambition: to make the complex simple and the ordinary extraordinary.",
+    "experience_exotec_position": "QA Python Developer",
+    "experience_exotec_description": "QA Engineer and Test Automation\nLeading role on the SkypodSystem product.\n- In charge of planning and leading meetings to define priority goals.\n- Prioritization of bugs to ensure delivery that meets customer needs.\n- Design, development, and maintenance of test automation in Python, enabling rapid assessment of integration and quality of new product versions.",
+    "experience_mbda_position": "Python Developer",
+    "experience_mbda_description": "Apprentice in automated testing of software and naval firing systems.\n\nDesign and Development of an automatic test and sanctioning tool\n - Layered architecture\n - PCAP file reading (Python)\n - Database filling/queries (SQL)\n - Creation of queries from operator data (QT HMI)\n - Configuration management and documentation (User Manual, Developer Manual)\n\nIntegration within the software testing team throughout the three years to refine the needs and functionalities of the created tool.\n\nDevelopment cycle followed close to an Agile cycle, based on successive iterations. Management of a backlog, task prioritization."
 }

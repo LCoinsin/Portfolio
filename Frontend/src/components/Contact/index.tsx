@@ -1,3 +1,5 @@
+import { Phone, Mail } from "lucide-react";
+
 function Contact() {
   return (
     <>
@@ -6,7 +8,12 @@ function Contact() {
       </h1>
       <div className="h-[60px]" />
       <div className="lg:col-span-3">
-        TODO
+        <div className="flex flex-row gap-4 text-paragraphe font-extralight items-center">
+          <div className="w-[40pt] h-[40pt] border border-black rounded-full flex justify-center items-center">
+            <Mail size={30} strokeWidth={0.7} />
+          </div>
+          coinsin.l@outlook.com
+        </div>
         {/* <form action="#" className="space-y-4">
           <div>
             <input

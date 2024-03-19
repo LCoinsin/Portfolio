@@ -11,7 +11,7 @@ export default {
         'medium': '32pt',
         'small': '24pt',
         'tyni': '16pt',
-        'paragraphe': '18pt',
+        'paragraphe': '15pt',
         'footnote': '14pt',
       },
       fontFamily: {
