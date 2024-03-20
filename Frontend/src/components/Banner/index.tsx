@@ -15,8 +15,10 @@ function Banner({ className }: BannerProps) {
       className={`${className} flex flex-row items-center justify-center overflow-x-hidden lg:justify-between `}
     >
       <div className="flex flex-col items-center lg:items-start">
-        <h2 className="text-small sm:text-medium">{t("banner_subtitle")}</h2>
-        <h2 className="text-small sm:text-large text-center font-extrabold lg:text-left">
+        <h2 className="text-small font-light sm:font-normal sm:text-medium">
+          {t("banner_subtitle")}
+        </h2>
+        <h2 className="text-medium sm:text-large text-center font-extrabold lg:text-left">
           {i18n.language === "fr" ? (
             <>
               <span className="text-primary">{t("banner_title_2")}</span>
