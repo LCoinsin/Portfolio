@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import IMAGES from "../../assets/images/Images";
 import { useTranslation } from "react-i18next";
+import { Typewriter } from "react-simple-typewriter";
 
 interface BannerProps {
   className?: string;
@@ -20,11 +21,24 @@ function Banner({ className }: BannerProps) {
             <>
               <span className="text-primary">{t("banner_title_2")}</span>
               <br />
-              {t("banner_title_1")}
+              <Typewriter
+                words={t("banner_title_1", { returnObjects: true })}
+                loop={false}
+                cursor={true}
+                typeSpeed={150}
+                deleteSpeed={80}
+              />
             </>
           ) : (
             <>
-              {t("banner_title_1")}
+              <Typewriter
+                words={t("banner_title_1", { returnObjects: true })}
+                loop={false}
+                cursor={true}
+                typeSpeed={150}
+                deleteSpeed={80}
+              />
+              {/* {t("banner_title_1")} */}
               <br />
               <span className="text-primary">{t("banner_title_2")}</span>
             </>
