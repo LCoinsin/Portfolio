@@ -33,7 +33,7 @@ function Portfolio() {
 
   return (
     <div className="w-7xl font-mplus mx-auto max-w-7xl px-10">
-      <div className="flex h-screen max-h-screen flex-col text-black">
+      <div className="flex h-screen max-h-screen min-h-[700px] flex-col text-black">
         <Header headerSection={sections} />
         <Banner className="flex-grow" />
       </div>

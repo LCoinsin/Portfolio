@@ -12,7 +12,7 @@ function Banner({ className }: BannerProps) {
 
   return (
     <div
-      className={`${className} flex flex-row items-center justify-center overflow-x-hidden lg:justify-between `}
+      className={`${className} flex flex-row items-center justify-center min-h-[500px] lg:justify-between `}
     >
       <div className="flex flex-col items-center lg:items-start">
         <h2 className="text-small font-light sm:font-normal sm:text-medium">
