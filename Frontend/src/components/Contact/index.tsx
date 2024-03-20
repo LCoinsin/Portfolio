@@ -1,4 +1,4 @@
-import { Linkedin, LinkedinIcon, Mail, Phone } from "lucide-react";
+import { LinkedinIcon, Mail, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 function Contact({ id }: { id: string }) {
