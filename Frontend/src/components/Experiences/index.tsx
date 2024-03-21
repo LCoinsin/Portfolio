@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 
 function Experience({ id }: { id: string }) {
   const { t } = useTranslation();
