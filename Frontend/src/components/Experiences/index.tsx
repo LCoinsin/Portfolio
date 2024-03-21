@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 function Experience({ id }: { id: string }) {
   const { t } = useTranslation();
@@ -61,7 +62,7 @@ function Experience({ id }: { id: string }) {
 
   const changeExperience = (id: number) => {
     const newExperience = ExperienceList.find(
-      (experience) => experience.id === id,
+      (experience) => experience.id === id
     );
     if (newExperience) {
       setExperienceDetails(newExperience);

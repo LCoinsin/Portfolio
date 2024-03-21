@@ -51,7 +51,7 @@ function Banner({ className }: BannerProps) {
         </p>
         <div className="h-8" />
         <Link to="myStory" smooth={true} duration={600}>
-          <button className="text-paragraphe w-fit rounded-lg bg-black px-8 py-2 font-extralight text-white shadow-lg">
+          <button className="text-paragraphe w-fit rounded-lg bg-black px-8 py-2 font-extralight text-white shadow-xl">
             {t("contact_title")}
           </button>
         </Link>
