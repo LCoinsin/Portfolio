@@ -1,11 +1,14 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
+import "./i18n";
 import "./index.css";
 import Portfolio from "./pages/Home";
-import "./i18n";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <Portfolio />
-  </React.StrictMode>
+    <SpeedInsights />
+  </>,
+  // </React.StrictMode>
 );
